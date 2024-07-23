@@ -1,0 +1,59 @@
+.benefits {
+	@include adaptiveValue("padding-top", 60, 45);
+	@include adaptiveValue("padding-bottom", 107, 83);
+	&__container {
+	}
+	&__title {
+		font-family: "Ubuntu", sans-serif;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 38, 24);
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+	&__items {
+		display: flex;
+		row-gap: 20px;
+		margin: 0 -10px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__item {
+		padding: 0 10px;
+		flex: 0 1 33.333%;
+		@media (max-width: em(1100)) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: em(600)) {
+			flex: 1 1 auto;
+		}
+	}
+}
+.item-benefits {
+	height: 100%;
+	box-shadow:
+		0 5px 12px 0 rgba(1, 0, 56, 0.05),
+		0 21px 21px 0 rgba(1, 0, 56, 0.04),
+		0 48px 29px 0 rgba(1, 0, 56, 0.03),
+		0 86px 34px 0 rgba(1, 0, 56, 0.01),
+		0 134px 37px 0 rgba(1, 0, 56, 0);
+	background: #f7f7f7;
+	padding: 20px 10px;
+	text-align: center;
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 1.25;
+		@include adaptiveValue("font-size", 28, 20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 5);
+		}
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 1.41;
+		@include adaptiveValue("font-size", 22, 16);
+	}
+}

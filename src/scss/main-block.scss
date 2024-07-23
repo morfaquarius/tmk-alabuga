@@ -21,12 +21,14 @@
 		font-weight: 500;
 		@include adaptiveValue("font-size", 22, 16);
 		color: #fff;
-
+		max-width: 431px;
+		margin: 0 auto;
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 45, 15);
 		}
 	}
 	&__button {
+		transition: all 0.3s;
 		background-color: #ffc940;
 		@include adaptiveValue("font-size", 24, 16);
 		font-weight: 600;
@@ -36,6 +38,11 @@
 		@include adaptiveValue("padding-right", 24, 20, 0, 1390, 767.98);
 		@media (min-width: $mobileSmall) {
 			justify-self: center;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #e19900;
+			}
 		}
 	}
 	&__background {
