@@ -1,0 +1,109 @@
+.assortment {
+	@include adaptiveValue("padding-top", 70, 40);
+	@include adaptiveValue("padding-bottom", 70, 60);
+	background-color: #fff;
+	clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 99%);
+	@media (min-width: em(650)) {
+		clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 97%);
+	}
+	&__container {
+	}
+	&__title {
+		font-family: "Ubuntu", sans-serif;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 38, 24);
+		text-align: center;
+		line-height: 1.08;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+
+	&__items {
+		display: grid;
+		@include adaptiveValue("row-gap", 50, 20);
+		grid-template-columns: repeat(3, minmax(300px, 1fr));
+		@media (max-width: em(1300)) {
+			grid-template-columns: repeat(2, minmax(300px, 1fr));
+		}
+		@media (max-width: em(650)) {
+			grid-template-columns: repeat(1, minmax(300px, 1fr));
+		}
+	}
+	&__item {
+		padding: 0 10px;
+		&--ticker {
+			@media (max-width: em(1300)) {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+}
+.item-assortment {
+	text-align: center;
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 28, 20);
+		line-height: 1.32;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 10, 5);
+		}
+	}
+	&__image-ibg {
+		padding-bottom: percent(199, 450);
+	}
+	&__text {
+		@include adaptiveValue("font-size", 22, 16);
+		line-height: 1.68;
+	}
+}
+.item-assortment-ticker {
+	padding: 20px 0;
+	box-shadow:
+		0 48px 29px 0 rgba(1, 0, 56, 0.03),
+		0 86px 34px 0 rgba(1, 0, 56, 0.01),
+		0 134px 37px 0 rgba(1, 0, 56, 0);
+	background: #00004a;
+
+	&__text {
+		color: #fff;
+		text-align: left;
+		white-space: normal !important;
+		padding: 0 20px;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 28, 18);
+		line-height: 1.32;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
+		background: #ffc940;
+		display: flex;
+		@include adaptiveValue("column-gap", 10, 3);
+	}
+
+	&__item {
+		font-family: "Ubuntu", sans-serif;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 42, 20);
+		line-height: 93%;
+		white-space: nowrap;
+		color: #232323;
+		@include adaptiveValue("padding-top", 25, 17);
+		@include adaptiveValue("padding-bottom", 25, 17);
+		animation: ticker 4s linear infinite;
+	}
+}
+
+@keyframes ticker {
+	0% {
+		transform: translateZ(0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
