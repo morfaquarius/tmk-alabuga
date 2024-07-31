@@ -351,12 +351,11 @@ body {
 .assortment__items {
   display: -ms-grid;
   display: grid;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
   -ms-grid-columns: (minmax(300px, 1fr))[3];
   grid-template-columns: repeat(3, minmax(300px, 1fr));
-}
-
-.assortment__item {
-  padding: 0 10px;
 }
 
 .item-assortment {
@@ -386,7 +385,6 @@ body {
 .item-assortment-ticker__text {
   color: #fff;
   text-align: left;
-  white-space: normal !important;
   padding: 0 20px;
   font-weight: 700;
   line-height: 1.32;
@@ -649,7 +647,7 @@ body {
   }
 }
 
-@media (max-width: 40.625em) {
+@media (max-width: 41.25em) {
   .assortment__items {
     -ms-grid-columns: (minmax(300px, 1fr))[1];
     grid-template-columns: repeat(1, minmax(300px, 1fr));
