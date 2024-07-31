@@ -1,6 +1,6 @@
 .benefits {
 	@include adaptiveValue("padding-top", 60, 45);
-	@include adaptiveValue("padding-bottom", 107, 83);
+	@include adaptiveValue("padding-bottom", 107, 40);
 	&__container {
 	}
 	&__title {
