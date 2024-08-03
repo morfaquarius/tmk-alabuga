@@ -1,0 +1,50 @@
+.banner {
+	@include adaptiveValue("padding-top", 110, 40);
+	@include adaptiveValue("padding-bottom", 170, 75);
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		@include adaptiveValue("height", 60, 30);
+		bottom: 0;
+		left: 0;
+		background: rgba(175, 175, 175, 0.5);
+		clip-path: polygon(0 51%, 100% 0%, 100% 100%, 0% 100%);
+	}
+	&__container {
+		padding: 0;
+		position: relative;
+	}
+	&__image-ibg {
+		padding-bottom: percent(480, 1390);
+		min-height: 240px;
+	}
+	&__text {
+		position: absolute;
+		z-index: 1;
+		img {
+			object-fit: cover;
+		}
+	}
+	&__text--blue {
+		@include adaptiveValue("width", 767, 386);
+		@include adaptiveValue("height", 150, 69);
+		@include adaptiveValue("top", 82, 20);
+		@include adaptiveValue("left", -78, -35);
+		img {
+			@include adaptiveValue("width", 767, 386);
+			@include adaptiveValue("height", 150, 68);
+		}
+	}
+	&__text--yellow {
+		@include adaptiveValue("width", 503, 255);
+		@include adaptiveValue("height", 91, 40);
+		@include adaptiveValue("bottom", 45, 25);
+		@include adaptiveValue("right", -48, -28);
+		img {
+			@include adaptiveValue("width", 503, 255);
+			@include adaptiveValue("height", 91, 40);
+		}
+	}
+}

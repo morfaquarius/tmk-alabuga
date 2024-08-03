@@ -38,6 +38,13 @@
 		@include adaptiveValue("font-size", 20, 14);
 	}
 	&__phone {
+		color: rgb(255, 255, 255, 1);
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgb(255, 255, 255, 0.7);
+			}
+		}
 		.name {
 			@media (max-width: em(991.98)) {
 				display: none;
