@@ -100,9 +100,10 @@
 
 @keyframes ticker {
 	0% {
-		transform: translateZ(0);
+		transform: translateX(10px);
 	}
+
 	to {
-		transform: translate3d(-100%, 0, 0);
+		transform: translateX(-100%);
 	}
 }

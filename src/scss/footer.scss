@@ -20,14 +20,55 @@
 	}
 	&__body {
 		display: flex;
+		justify-content: space-between;
+		max-width: 887px;
+		margin: 0 auto;
+		column-gap: 20px;
+		row-gap: 10px;
+		@media (max-width: em(520)) {
+			flex-wrap: wrap;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 15);
+		}
 	}
 	&__column {
 	}
 	&__title {
+		font-family: var(--family-secondary);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 34, 18);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 10, 3);
+		}
 	}
 	&__phone {
+		display: inline-block;
+		@include adaptiveValue("font-size", 20, 14);
+		@media (max-width: em(520)) {
+			display: block;
+		}
+		color: rgb(255, 255, 255, 1);
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgb(255, 255, 255, 0.7);
+			}
+		}
 	}
 	&__adress {
+		font-style: normal;
+		line-height: 151%;
+		@include adaptiveValue("font-size", 20, 14);
+		max-width: 508px;
+		@media (max-width: em(520)) {
+			max-width: 200px;
+		}
+	}
+	&__map {
+		width: 100%;
+		min-height: 215px;
+		aspect-ratio: 1390 / 426;
 	}
 }
 
