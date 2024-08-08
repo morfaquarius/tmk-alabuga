@@ -82,7 +82,7 @@
 		overflow: hidden;
 		background: #ffc940;
 		display: flex;
-		@include adaptiveValue("column-gap", 5, 5);
+		column-gap: 5px;
 	}
 
 	&__item {
