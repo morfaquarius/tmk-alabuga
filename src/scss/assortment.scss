@@ -82,7 +82,7 @@
 		overflow: hidden;
 		background: #ffc940;
 		display: flex;
-		@include adaptiveValue("column-gap", 10, 3);
+		@include adaptiveValue("column-gap", 5, 5);
 	}
 
 	&__item {
@@ -100,7 +100,7 @@
 
 @keyframes ticker {
 	0% {
-		transform: translateX(10px);
+		transform: translateX(5px);
 	}
 
 	to {
