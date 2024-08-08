@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window["FLS"] = true
+window["FLS"] = false
 
 // Подключение основного файла стилей
 import "../scss/style.scss"
@@ -183,7 +183,7 @@ autoHeight: false
 import * as flsScroll from "./files/scroll/scroll.js"
 
 // Плавная навигация по странице
-// flsScroll.pageNavigation();
+ flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру во время прокрутки
 // flsScroll.headerScroll();
