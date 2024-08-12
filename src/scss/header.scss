@@ -36,6 +36,7 @@
 		display: grid;
 		font-weight: 500;
 		@include adaptiveValue("font-size", 20, 14);
+		gap: 5px;
 	}
 	&__phone {
 		color: rgb(255, 255, 255, 1);

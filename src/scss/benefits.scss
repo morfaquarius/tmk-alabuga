@@ -4,7 +4,7 @@
 	&__container {
 	}
 	&__title {
-		font-family: "Ubuntu", sans-serif;
+		font-family: var(--family-secondary);
 		font-weight: 700;
 		@include adaptiveValue("font-size", 38, 24);
 		text-align: center;
